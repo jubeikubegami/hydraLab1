@@ -6,14 +6,15 @@
 </head>
 <body>
   <header>Water Cooler Talk!</header>
-  <nav>
-    <a href="/html/">Movies</a> |
-    <a href="/css/">Shows</a> |
-    <a href="/js/">Member Portal</a> |
-    <a href="/jquery/">Contact</a>
-  </nav>
+
   <aside>Aside</aside>
   <main>
+    <nav>
+      <a href="/html/">Movies</a> |
+      <a href="/css/">Shows</a> |
+      <a href="/js/">Member Portal</a> |
+      <a href="/jquery/">Contact</a>
+    </nav>
     <div class="container">
       <div class="box a">A</div>
       <div class="box b">B</div>
@@ -23,14 +24,63 @@
       <div class="box f">F</div>
     </div>
   </main>
-  <h1>
-  </h1>
   <footer>Footer Section</footer>
 </body>
 </html>
 
 
 <style>
+
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 10vw 30vw 10vw;
+  grid-gap: 1em;
+}
+
+header,
+footer {
+  grid-column: 1 / span 5;
+}
+
+main {
+  grid-column: 2 / span 4;
+}
+
+aside {
+  grid-column: span 1;
+}
+
+@media (max-width: 700px) {
+
+  main,
+  aside {
+    grid-column: 1 / span 5;
+  }
+
+}
+
+/* Demo Specific Styles */
+body {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1em 0;
+}
+
+header,
+main,
+aside,
+footer {
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header,
+footer {
+  height: 10vw;;
+}
 
 .container {
   display: grid;
