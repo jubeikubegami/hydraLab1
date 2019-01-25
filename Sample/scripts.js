@@ -12,7 +12,7 @@ req.onload = function()
 	//var i = 0;
 	//while(i<7)
 	//{
-	document.getElementById("demo").innerHTML = data.results[0].title;
+	document.getElementById("demo0").innerHTML = data.results[0].title;
 		//i ++;
 	//}
 	
