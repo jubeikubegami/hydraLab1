@@ -9,10 +9,16 @@ req.onload = function()
 {
 	var data = JSON.parse(this.response);
 	var dataSTR = JSON.stringify(data);
-	document.getElementById("demo0").innerHTML = data.results[0].title;
-	document.getElementById("demo1").innerHTML = data.results[1].title;
+	var i = 0;
+	while(i<7)
+	{
+		document.getElementById("demo").innerHTML += " "+data.results[i].title;
+		i ++;
+	}
+	
+	/*document.getElementById("demo1").innerHTML = data.results[1].title;
 	document.getElementById("demo2").innerHTML = data.results[2].title;
 	document.getElementById("demo3").innerHTML = data.results[3].title;
-	document.getElementById("demo4").innerHTML = data.results[4].title;
+	document.getElementById("demo4").innerHTML = data.results[4].title;*/
 }
 req.send();
