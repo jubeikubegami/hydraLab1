@@ -12,7 +12,9 @@ req.onload = function()
 	//var i = 0;
 	//while(i<7)
 	//{
+
 	document.getElementById("demo0").innerHTML = data.results[0].title;
+
 		//i ++;
 	//}
 	
@@ -20,5 +22,6 @@ req.onload = function()
 	document.getElementById("demo2").innerHTML = data.results[2].title;
 	document.getElementById("demo3").innerHTML = data.results[3].title;
 	document.getElementById("demo4").innerHTML = data.results[4].title;
+
 }
 req.send();
