@@ -19,6 +19,6 @@ req.onload = function()
 	document.getElementById("demo1").innerHTML = data.results[1].title;
 	document.getElementById("demo2").innerHTML = data.results[2].title;
 	document.getElementById("demo3").innerHTML = data.results[3].title;
-	document.getElementById("demo4").innerHTML = data.results[4].title;*/
+	document.getElementById("demo4").innerHTML = data.results[4].title;
 }
 req.send();
