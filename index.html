@@ -54,7 +54,7 @@
     <div class="row wcl_header">
 
       <div class="page-header">
-    <h1>Example page header <small>Subtext for header</small></h1>
+    <h1>Water Cooler Talk<br/><small>Social Relevancy for Nerds</small></h1>
   </div>
 
     </div>
@@ -63,6 +63,9 @@
     <div class="row">
       <div class="col-md-3">
         <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">Profile</h4>
+          </div>
           <div class="panel-body">
         <img src="https://avatarfiles.alphacoders.com/716/71684.jpg" alt="nancy's avatar" class="img-thumbnail">
         <h4 style="font-family: 'Oswald', sans-serif;">Fancy Nancy</h4>
@@ -79,7 +82,22 @@
 
       <div class="col-md-9">
         <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">WCT Recommendations
+
+              <p>Updated: <span id="demoTime"></span></p>
+
+              <script>
+              var d = new Date();
+              document.getElementById("demoTime").innerHTML = d;
+              </script>
+
+
+
+            </h4>
+          </div>
           <div class="panel-body">
+<!-- No Navigation at this time - for next iteration
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,6 +133,7 @@
             </form>
           </div>
         </nav>
+      -->
         <div class="panel panel-info">
           <div class="panel-heading"><h3 class="panel-title">Movies</h3></div>
           <div class="panel-body">
@@ -135,14 +154,15 @@
       </div>
     </div>
 </div>
+</div>
 <!-- SEARCH FOR MOVIE DETAILS CODE FROM CODEPEN -->
 <div class="row">
   <div class="col-md-12">
-<div class="panel panel-default">
+<div class="panel panel-primary">
   <div class="panel-heading">
     <h4 class="panel-title">Search for Movie Details</h4>
   </div>
-  <div class="panel-body">
+  <div class="panel-body wtcSearchBodyPanel">
 
     <div class="apiKeyTMDB">
         <label for="key">Please enter your key</label>
@@ -150,12 +170,12 @@
     </div>
 
     <div class="mainDiv">
-        <h2>Enter your title and click "Search"</h2>
+        <h5>Enter your title and click "Search"</h5>
 
         <div class="row justify-content-md-center">
           <div class="col-md-3"></div>
         <div class="col-md-6">
-<div class="input-group">
+<div class="input-group wtcSearchInputBox">
   <input type="text" class="form-control" placeholder="Search for..." id="input">
   <span class="input-group-btn">
     <button class="btn btn-default" type="button" id="btn">Search</button>
@@ -166,7 +186,7 @@
 </div>
     </div>
 <br/>
-    <div class="container">
+    <div class="wtcSearchResultsPanel">
 <div class="row">
         <div id="jsGrid"></div>
 

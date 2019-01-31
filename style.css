@@ -1,9 +1,20 @@
+.wtcSearchResultsPanel{
+      margin: 0px 15px;
+}
+
+.wtcSearchBodyPanel{
+  min-height:500px;
+}
+
 .mainDiv{
   margin: 0 auto;
-  left: 500px;
+  left: 400px;
   text-align: center;
 }
 
+.wtcSearchInputBox{
+  z-index: 0;
+}
 
 
 #pagesContainer{
