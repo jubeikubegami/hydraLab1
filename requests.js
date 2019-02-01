@@ -1,4 +1,4 @@
-//Script for the Movie Search functionality - code based on the Moviedb requests CodePen Project by Kristiyan https://codepen.io/Gochev/pen/rwYxKB  
+//Script for the Movie Search functionality - code based on the Moviedb requests CodePen Project by Kristiyan https://codepen.io/Gochev/pen/rwYxKB
 
 (function(){
     String.format = function () {
@@ -53,9 +53,9 @@ $("#jsGrid").jsGrid({
     },
     fields: [
         { name: "id", type: "text", css: "movie-id", width: 0 },
-        { name: "title", type: "text", valueField: "id", textField: "Title" },
-        { name: "original_title", type: "text" },
-        { name: "release_date", type: "text" },
+        { name: "Title", type: "text", valueField: "id", textField: "Title" },
+        { name: "Original Title", type: "text" },
+        { name: "Release Date", type: "text" },
     ]
 });
 
