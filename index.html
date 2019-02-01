@@ -1,83 +1,219 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Required meta tags -->
+  <!-- Required meta tags-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!--References Based on the Moviedb requests CodePen Project by Kristiyan https://codepen.io/Gochev/pen/rwYxKB  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+
 
   <title>Water Cooler Talk</title>
+    <!-- Styling -->
+  <style>
+  .wcl_header{
+    background-image: None;
+  }
+  .title{
+    font-family: 'Oswald', Serif;
+    font-size: 24px;
+    color: aliceblue;
+    text-shadow: 4px 4px 4px #aaa;
+  }
+  .heading{
+    font-family: 'Oswald', Serif;
+    font-size: 14px;
+    color: black;
+  }
+  </style>
 </head>
+
+  <!-- Start of body -->
 <body>
 
   <div class="container">
     <!--Heading-->
+    <div class="row wcl_header">
+      <div class="page-header">
+    <h1>Water Cooler Talk<br/><small>Social Relevancy for Nerds</small></h1>
+  </div>
+    </div>
+
+    <!--Main Content-->
     <div class="row">
-      <div class="col-md-12 border border-primary">
-      <h1>Water Cooler Talk</h1>
+        <!-- Profile Section -->
+      <div class="col-md-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">Profile</h4>
+          </div>
+          <div class="panel-body">
+        <img src="https://avatarfiles.alphacoders.com/716/71684.jpg" alt="nancy's avatar image" class="img-thumbnail">
+        <h4 style="font-family: 'Oswald', sans-serif;">Fancy Nancy</h4>
+        <h5 style="font-family: 'Oswald', sans-serif;">Member Since 2017</h5>
+        <p style="font-family: 'Oswald', sans-serif;">Interests</p>
+
+        <ul>
+          <li style="font-family: 'Oswald', sans-serif;">Harry Potter</li>
+          <li style="font-family: 'Oswald', sans-serif;">Game of Thrones</li>
+        </ul>
+      </div>
       </div>
     </div>
-  </div>
-  <!--Main Content-->
-  <div class="row">
-    <div class="col-md-3 border border-danger">
-      <h4>Fancy Nancy</h4>
-      <h5>Member Since 2017</h5>
-    </div>
+  <!-- Recommendation sections -->
+      <div class="col-md-9">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title">WCT Recommendations
+  <!-- Lists refresh on load and sends a GET request to TheMoviedb API -->
+              <p>Updated: <span id="demoTime"></span></p>
+              <script>
+              var d = new Date();
+              document.getElementById("demoTime").innerHTML = d;
+              </script>
+            </h4>
+          </div>
+          <div class="panel-body">
+<!-- No Navigation  functinoality at this time. Saving for next iteration.-->
 
-    <div class="col-md-9 border border-warning">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<!--        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      -->
+
+        <!-- This panel shows movies -->
+        <div class="panel panel-info">
+          <div class="panel-heading"><h3 class="panel-title">Movies</h3></div>
+          <div class="panel-body">
+            <script src="scripts.js"></script>
+
+            <p id ="demo"></p>
+
+
+          </div>
         </div>
-      </nav>
+          <!-- This panel shows TV shows -->
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">Shows</h3>
+          </div>
+          <div class="panel-body">
+            <p id = "demo2"></p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!--Footer-->
-  <div class="row">
-  Water Cooler Talk Trademark
-
 </div>
+</div>
+<!--Movie Search Functionality: Code Based on the Moviedb requests CodePen Project by Kristiyan https://codepen.io/Gochev/pen/rwYxKB ; modified for our purposes -->
+<div class="row">
+  <div class="col-md-12">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h4 class="panel-title">Search for Movie Details</h4>
+  </div>
+  <div class="panel-body wtcSearchBodyPanel">
 
+    <div class="apiKeyTMDB">
+        <label for="key">Please enter your key</label>
+        <!--Using our own API key-->
+        <input type="text" id="key" value="ee4147bedd685cdebb23042532c92117">
+    </div>
 
+    <div class="mainDiv">
+        <h5>Enter your title and click "Search"</h5>
+        <div class="row justify-content-md-center">
+          <div class="col-md-3"></div>
+        <div class="col-md-6">
+<div class="input-group wtcSearchInputBox">
+  <input type="text" class="form-control" placeholder="Search for..." id="input">
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="button" id="btn">Search</button>
+  </span>
+</div><!-- /input-group -->
+</div><!-- /.col-lg-6 -->
+<div class="col-md-3"></div>
+</div>
+    </div>
+<br/>
+    <div class="wtcSearchResultsPanel">
+<div class="row">
+        <div id="jsGrid"></div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-2"><img id="image"></div>
+                <div class="col-sm-12 col-md-3 col-lg-3" id="detailsContainer"></div>
+                <div class="col-sm-12 col-md-9 col-lg-7" id="secondDetailsContainer">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+    <!--Footer-->
+  </div>
+</div>
+<!--Script that references the Movie Search API feature-->
+<script src="requests.js"></script>
+
 </body>
 </html>

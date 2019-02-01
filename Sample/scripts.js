@@ -10,5 +10,14 @@ req.onload = function()
 	var data = JSON.parse(this.response);
 	var dataSTR = JSON.stringify(data);
 	document.getElementById("demo").innerHTML = dataSTR;
-}
+
+	//var i = 0;
+	//while(i<7)
+	//{
+
+	document.getElementById("demo0").innerHTML = data.results[0].title;
+
+		//i ++;
+	//}
+
 req.send();
