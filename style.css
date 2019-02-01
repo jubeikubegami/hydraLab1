@@ -19,6 +19,22 @@
   z-index: 0;
 }
 
+h4.panel-title{
+    font-family: 'Oswald', Serif;
+    font-size: 18px;
+}
+
+.logo{
+    max-width: 100%;
+}
+
+.tagline{
+    text-align: center;
+    font-family: 'Oswald', Serif;
+    color: #0d0f7b;
+    padding-top: 0px;
+    margin-top: 0px;
+}
 /*Hide the API Key*/
 .apiKeyTMDB{
   display: none;
