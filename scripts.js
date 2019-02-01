@@ -17,7 +17,7 @@ req.onload = function()
 	{
 		//Future work for image display
 		/*mUrls[i]= data.results[i].poster_path;
-		mPoster = document.createElement("IMG");
+		var mPoster = document.createElement("IMG");
 		mPoster.src="http://image.tmdb.org/t/p/w200"+mUrls[i];
 		mPoster.setAttribute("width", "304");
 		mPoster.setAttribute("height", "228");
