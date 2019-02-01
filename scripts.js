@@ -13,7 +13,7 @@ req.onload = function()
 	var data = JSON.parse(this.response);
 	var dataSTR = JSON.stringify(data);
 	var i = 0;
-	while(i<7)
+	while(i<6)
 	{
 		//Future work for image display
 		/*mUrls[i]= data.results[i].poster_path;
@@ -23,9 +23,11 @@ req.onload = function()
 		mPoster.setAttribute("height", "228");
 		mPoster.setAttribute("alt", "Movie image");*/
 		//document.body.appendChild(mPoster);
-		document.getElementById("demo").innerHTML += " ,"+data.results[i].title+;
+		document.getElementById("demo").innerHTML += data.results[i].title+",";
+
 		i ++;
 	}
+	document.getElementById("demo").innerHTML += data.results[i].title+".";
 	
 	/*document.getElementById("demo1").innerHTML = data.results[1].title;
 	document.getElementById("demo2").innerHTML = data.results[2].title;
@@ -39,10 +41,11 @@ req2.onload = function()
 	var data2 = JSON.parse(this.response);
 	var dataSTR2 = JSON.stringify(data2);
 	var i = 0;
-	while(i<7)
+	while(i<6)
 	{
 		document.getElementById("demo2").innerHTML += " "+data2.results[i].name+",";
 		i ++;
 	}
+	document.getElementById("demo2").innerHTML += data.results[i].name+".";
 }
 req2.send();
