@@ -9,12 +9,21 @@ req2.open('GET', 'https://api.themoviedb.org/3/trending/tv/week?api_key=417064dd
 
 req.onload = function()
 {
+	var mUrls =[];
 	var data = JSON.parse(this.response);
 	var dataSTR = JSON.stringify(data);
 	var i = 0;
 	while(i<7)
 	{
-		document.getElementById("demo").innerHTML += " "+data.results[i].title;
+		//Future work for image display
+		/*mUrls[i]= data.results[i].poster_path;
+		mPoster = document.createElement("IMG");
+		mPoster.src="http://image.tmdb.org/t/p/w200"+mUrls[i];
+		mPoster.setAttribute("width", "304");
+		mPoster.setAttribute("height", "228");
+		mPoster.setAttribute("alt", "Movie image");*/
+		document.body.appendChild(mPoster);
+		document.getElementById("demo").innerHTML += " "+data.results[i].title+",";
 		i ++;
 	}
 	
@@ -32,7 +41,7 @@ req2.onload = function()
 	var i = 0;
 	while(i<7)
 	{
-		document.getElementById("demo2").innerHTML += " "+data2.results[i].name;
+		document.getElementById("demo2").innerHTML += " "+data2.results[i].name+",";
 		i ++;
 	}
 }
