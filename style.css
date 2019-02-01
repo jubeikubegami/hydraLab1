@@ -1,6 +1,22 @@
 
 /**HYDRA styling code**/
 
+
+body {
+    background: -webkit-linear-gradient(-124deg, rgb(255, 255, 255), rgb(222, 213, 239));
+    background: linear-gradient(-124deg, rgb(255, 255, 255), rgb(222, 213, 239));
+    font-family: "Oswald", serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "oswald",serif;
+}
+
 .wtcSearchResultsPanel{
       margin: 0px 15px;
 }
@@ -19,14 +35,19 @@
   z-index: 0;
 }
 
-h4.panel-title{
-    font-family: 'Oswald', Serif;
-    font-size: 18px;
-}
+
 
 .logo{
     max-width: 100%;
 }
+
+.jsgrid {
+    position: relative;
+    overflow: hidden;
+    font-size: 1em;
+    font-family: "oswald", serif;
+}
+
 
 .tagline{
     text-align: center;
@@ -35,6 +56,44 @@ h4.panel-title{
     padding-top: 0px;
     margin-top: 0px;
 }
+
+
+.panel-primary {
+    border-color: #0d0f7b;
+}
+
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #0d0f7b;
+    border-color: #0d0f7b;
+}
+
+.panel-info>.panel-heading {
+    color: #0b0e23;
+    font-family: "oswald", serif;
+    background-color: #fccf5d;
+    border-color: #fccf5d;
+}
+
+.panel-warning>.panel-heading {
+    color: #0b0e23;
+    background-color: #fccf5d;
+    border-color: #fccf5d;
+}
+
+.panel-warning {
+    border-color: #fccf5d;
+}
+
+.panel-info {
+    border-color: #fccf5d;
+}
+
+.page-header{
+    margin-top: 10px;
+}
+
+
 /*Hide the API Key*/
 .apiKeyTMDB{
   display: none;
