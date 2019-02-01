@@ -65,8 +65,8 @@ h4.panel-title{
 display: inline-block;
 position: relative;
 
-width: 50%;
-height: 100px;
+
+
 
 
 }
@@ -75,9 +75,16 @@ line-height: 35px;
 width: 100%;
 }
 
+/** Pop-up Modal Movie Title**/
+#secondDetailsContainer>ul>li:first-child{
+font-size: 1.15em;
+font-weight: bold;
+}
+
+
 #secondDetailsContainer ul {
   padding: 0;
-  height: 100px;
+
   list-style-type: none;
 }
 
@@ -85,7 +92,8 @@ width: 100%;
 position:relative;
 display: inline-block;
 vertical-align:top;
-width: 200px;
+width: 100%;
+    max-width: 200px;
 height: auto%;
 
 

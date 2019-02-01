@@ -1,4 +1,4 @@
-//Script for the Movie Search functionality - code based on the Moviedb requests CodePen Project by Kristiyan https://codepen.io/Gochev/pen/rwYxKB  
+//Script for the Movie Search functionality - code based on the Moviedb requests CodePen Project by Kristiyan https://codepen.io/Gochev/pen/rwYxKB
 
 (function(){
     String.format = function () {
