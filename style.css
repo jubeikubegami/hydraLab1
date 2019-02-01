@@ -1,3 +1,6 @@
+
+/**HYDRA styling code**/
+
 .wtcSearchResultsPanel{
       margin: 0px 15px;
 }
@@ -16,6 +19,29 @@
   z-index: 0;
 }
 
+h4.panel-title{
+    font-family: 'Oswald', Serif;
+    font-size: 18px;
+}
+
+.logo{
+    max-width: 100%;
+}
+
+.tagline{
+    text-align: center;
+    font-family: 'Oswald', Serif;
+    color: #0d0f7b;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+/*Hide the API Key*/
+.apiKeyTMDB{
+  display: none;
+}
+
+
+/**Styling based on the Moviedb requests CodePen Project by Kristiyan https://codepen.io/Gochev/pen/rwYxKB  --> **/
 
 #pagesContainer{
   position: relative;
@@ -115,9 +141,4 @@ line-height: 35px;
 .movie-id
 {
   display: none; /*!important;*/
-}
-
-/*Hide the API Key*/
-.apiKeyTMDB{
-  display: none;
 }
