@@ -22,7 +22,7 @@ req.onload = function()
 		mPoster.setAttribute("width", "304");
 		mPoster.setAttribute("height", "228");
 		mPoster.setAttribute("alt", "Movie image");*/
-		document.body.appendChild(mPoster);
+		//document.body.appendChild(mPoster);
 		document.getElementById("demo").innerHTML += " "+data.results[i].title+",";
 		i ++;
 	}
