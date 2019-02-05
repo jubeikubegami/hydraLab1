@@ -16,13 +16,13 @@ req.onload = function()
 	while(i<6)
 	{
 		//Future work for image display
-		/*mUrls[i]= data.results[i].poster_path;
+		mUrls[i]= data.results[i].poster_path;
 		var mPoster = document.createElement("IMG");
 		mPoster.src="http://image.tmdb.org/t/p/w200"+mUrls[i];
 		mPoster.setAttribute("width", "304");
 		mPoster.setAttribute("height", "228");
-		mPoster.setAttribute("alt", "Movie image");*/
-		//document.body.appendChild(mPoster);
+		mPoster.setAttribute("alt", "Movie image");
+		document.getElementById("demo").appendChild(mPoster);
 		document.getElementById("demo").innerHTML += data.results[i].title+", ";
 
 		i ++;
@@ -41,8 +41,16 @@ req2.onload = function()
 	var data2 = JSON.parse(this.response);
 	var dataSTR2 = JSON.stringify(data2);
 	var i = 0;
+	var tUrls = [];
 	while(i<6)
 	{
+		tUrls[i]= data2.results[i].poster_path;
+		var tPoster = document.createElement("IMG");
+		tPoster.src="http://image.tmdb.org/t/p/w200"+tUrls[i];
+		tPoster.setAttribute("width", "304");
+		tPoster.setAttribute("height", "228");
+		tPoster.setAttribute("alt", "TV image");
+		document.getElementById("demo2").appendChild(tPoster);
 		document.getElementById("demo2").innerHTML += data2.results[i].name+", ";
 		i ++;
 	}
