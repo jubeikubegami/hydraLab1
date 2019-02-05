@@ -23,7 +23,7 @@ req.onload = function()
 		mPoster.setAttribute("height", "228");
 		mPoster.setAttribute("alt", "Movie image");*/
 		//document.body.appendChild(mPoster);
-		document.getElementById("demo").innerHTML += data.results[i].title+",";
+		document.getElementById("demo").innerHTML += data.results[i].title+", ";
 
 		i ++;
 	}
@@ -43,9 +43,9 @@ req2.onload = function()
 	var i = 0;
 	while(i<6)
 	{
-		document.getElementById("demo2").innerHTML += " "+data2.results[i].name+",";
+		document.getElementById("demo2").innerHTML += data2.results[i].name+", ";
 		i ++;
 	}
-	document.getElementById("demo2").innerHTML += data.results[i].name+".";
+	document.getElementById("demo2").innerHTML += data2.results[i].name+".";
 }
 req2.send();
