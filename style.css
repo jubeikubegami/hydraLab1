@@ -98,7 +98,7 @@ body {
 }
 
 
-/*Hide the API Key*/
+/*Hide the API Key from displaying*/
 .apiKeyTMDB{
   display: none;
 }
@@ -127,11 +127,6 @@ body {
 #secondDetailsContainer{
 display: inline-block;
 position: relative;
-
-
-
-
-
 }
 #secondDetailsContainer ul li{
 line-height: 35px;
