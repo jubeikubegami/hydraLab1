@@ -75,22 +75,22 @@ body {
 .panel-info>.panel-heading {
     color: #0b0e23;
     font-family: "oswald", serif;
-    background-color: #fccf5d;
-    border-color: #fccf5d;
+    background-color: #bce8f1;
+    border-color: #bce8f1;
 }
 
 .panel-warning>.panel-heading {
     color: #0b0e23;
-    background-color: #fccf5d;
-    border-color: #fccf5d;
+    background-color: #bce8f1;
+    border-color: #bce8f1;
 }
 
 .panel-warning {
-    border-color: #fccf5d;
+    border-color: #bce8f1;
 }
 
 .panel-info {
-    border-color: #fccf5d;
+    border-color: #bce8f1;
 }
 
 .page-header{
