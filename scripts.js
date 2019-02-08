@@ -12,7 +12,7 @@ req.onload = function()
 	var mUrls =[];
 	var data = JSON.parse(this.response);
 	var i = 0;
-	while(i<6)
+	while(i<12)
 	{
 		//Future work for image display
 		mUrls[i]= data.results[i].poster_path;
@@ -42,7 +42,7 @@ req2.onload = function()
 	var data2 = JSON.parse(this.response);
 	var i = 0;
 	var tUrls = [];
-	while(i<6)
+	while(i<12)
 	{
 		tUrls[i]= data2.results[i].poster_path;
 		var tPoster = document.createElement("IMG");
