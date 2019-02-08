@@ -18,9 +18,10 @@ req.onload = function()
 		mUrls[i]= data.results[i].poster_path;
 		var mPoster = document.createElement("IMG");
 		mPoster.src="http://image.tmdb.org/t/p/w200"+mUrls[i];
+		mPoster.className = "trendPoster";
 		mPoster.setAttribute("width", "100");
 		mPoster.setAttribute("height", "150");
-		mPoster.setAttribute("alt", "Movie image");
+		mPoster.setAttribute("alt", data.results[i].title);
 		document.getElementById("demo").innerHTML += "<div class ='trendBlock'>";
 		document.getElementById("demo").appendChild(mPoster);
 		document.getElementById("demo").innerHTML += "<div class ='trendTitle'>"+data.results[i].title +"</div>"+"</div>";
@@ -48,7 +49,7 @@ req2.onload = function()
 		tPoster.src="http://image.tmdb.org/t/p/w200"+tUrls[i];
 		tPoster.setAttribute("width", "100");
 		tPoster.setAttribute("height", "150");
-		tPoster.setAttribute("alt", "TV image");
+		tPoster.setAttribute("alt", data2.results[i].name);
 		document.getElementById("demo2").innerHTML += "<div class ='trendBlock'>";
 		document.getElementById("demo2").appendChild(tPoster);
 		document.getElementById("demo2").innerHTML += "<div class ='trendTitle'>"+data2.results[i].name+"</div>"+"</div>";
