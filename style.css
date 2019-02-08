@@ -3,8 +3,11 @@
 
 
 body {
+
     background: -webkit-linear-gradient(-124deg, rgb(255, 255, 255), rgb(222, 213, 239));
     background: linear-gradient(-124deg, rgb(255, 255, 255), rgb(222, 213, 239));
+
+
     /* background by SVGBackgrounds.com */
     font-family: "Oswald", serif;
     font-size: 14px;
@@ -36,12 +39,7 @@ body {
   z-index: 0;
 }
 
-.panel-title{
-    font-family: 'Oswald', Serif;
-    font-size: 16px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+
 
 .logo{
     max-width: 100%;
@@ -54,6 +52,7 @@ body {
     font-family: "oswald", serif;
 }
 
+
 .tagline{
     text-align: center;
     font-family: 'Oswald', Serif;
@@ -61,6 +60,7 @@ body {
     padding-top: 0px;
     margin-top: 0px;
 }
+
 
 .panel-primary {
     border-color: #0d0f7b;
@@ -75,32 +75,80 @@ body {
 .panel-info>.panel-heading {
     color: #0b0e23;
     font-family: "oswald", serif;
-    background-color: #fccf5d;
-    border-color: #fccf5d;
+    background-color: #bce8f1;
+    border-color: #bce8f1;
 }
 
 .panel-warning>.panel-heading {
     color: #0b0e23;
-    background-color: #fccf5d;
-    border-color: #fccf5d;
+    background-color: #bce8f1;
+    border-color: #bce8f1;
 }
 
 .panel-warning {
-    border-color: #fccf5d;
+    border-color: #bce8f1;
 }
 
 .panel-info {
-    border-color: #fccf5d;
+    border-color: #bce8f1;
 }
 
 .page-header{
     margin-top: 10px;
 }
 
+/**Column Flexing Code Reference: https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height**//
+
+.isFlex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.isFlex  > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+.isFlex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.isFlex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 
 
 
-/*Hide the API Key*/
+
+#demo img{
+  display: inline-block;
+  margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+#demo2 img{
+  display: inline-block;
+  margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profilePanel{
+  height: 100%;
+}
+
+/*Hide the API Key from displaying*/
 .apiKeyTMDB{
   display: none;
 }
@@ -129,20 +177,22 @@ body {
 #secondDetailsContainer{
 display: inline-block;
 position: relative;
-
-width: 50%;
-height: 100px;
-
-
 }
 #secondDetailsContainer ul li{
 line-height: 35px;
 width: 100%;
 }
 
+/** Pop-up Modal Movie Title**/
+#secondDetailsContainer>ul>li:first-child{
+font-size: 1.15em;
+font-weight: bold;
+}
+
+
 #secondDetailsContainer ul {
   padding: 0;
-  height: 100px;
+
   list-style-type: none;
 }
 
@@ -150,7 +200,8 @@ width: 100%;
 position:relative;
 display: inline-block;
 vertical-align:top;
-width: 200px;
+width: 100%;
+    max-width: 200px;
 height: auto%;
 
 
