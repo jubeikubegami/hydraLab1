@@ -97,6 +97,7 @@ body {
     margin-top: 10px;
 }
 
+/**Column Flexing Code Reference: https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height**//
 
 .isFlex {
     display: flex;
