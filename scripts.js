@@ -21,8 +21,9 @@ req.onload = function()
 		mPoster.setAttribute("width", "100");
 		mPoster.setAttribute("height", "150");
 		mPoster.setAttribute("alt", "Movie image");
+		document.getElementById("demo").innerHTML += "<div class ='trendBlock'>";
 		document.getElementById("demo").appendChild(mPoster);
-		document.getElementById("demo").innerHTML += data.results[i].title;
+		document.getElementById("demo").innerHTML += "<div class ='trendTitle'>"+data.results[i].title +"</div>"+"</div>";
 		i ++;
 	}
 	/*mUrls[i]= data.results[i].poster_path;
@@ -48,8 +49,9 @@ req2.onload = function()
 		tPoster.setAttribute("width", "100");
 		tPoster.setAttribute("height", "150");
 		tPoster.setAttribute("alt", "TV image");
+		document.getElementById("demo2").innerHTML += "<div class ='trendBlock'>";
 		document.getElementById("demo2").appendChild(tPoster);
-		document.getElementById("demo2").innerHTML += data2.results[i].name;
+		document.getElementById("demo2").innerHTML += "<div class ='trendTitle'>"+data2.results[i].name+"</div>"+"</div>";
 		i ++;
 	}
 	/*tUrls[i]= data2.results[i].poster_path;
