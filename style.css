@@ -75,27 +75,61 @@ body {
 .panel-info>.panel-heading {
     color: #0b0e23;
     font-family: "oswald", serif;
-    background-color: #fccf5d;
-    border-color: #fccf5d;
+    background-color: #bce8f1;
+    border-color: #bce8f1;
 }
 
 .panel-warning>.panel-heading {
     color: #0b0e23;
-    background-color: #fccf5d;
-    border-color: #fccf5d;
+    background-color: #bce8f1;
+    border-color: #bce8f1;
 }
 
 .panel-warning {
-    border-color: #fccf5d;
+    border-color: #bce8f1;
 }
 
 .panel-info {
-    border-color: #fccf5d;
+    border-color: #bce8f1;
 }
 
 .page-header{
     margin-top: 10px;
 }
+
+/**Column Flexing Code Reference: https://scotch.io/bar-talk/different-tricks-on-how-to-make-bootstrap-columns-all-the-same-height**//
+
+.isFlex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.isFlex  > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+.isFlex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.isFlex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
 
 
 #demo img{
@@ -110,12 +144,8 @@ body {
     margin-bottom: 2rem;
 }
 
-.trendTitle{
-  display: none;
-}
-
-.trendBlock{
-  display: none;
+.profilePanel{
+  height: 100%;
 }
 
 /*Hide the API Key from displaying*/
