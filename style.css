@@ -98,6 +98,39 @@ body {
 }
 
 
+.isFlex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.isFlex  > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
+.isFlex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.isFlex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+
+
 #demo img{
   display: inline-block;
   margin-right: 2rem;
@@ -110,12 +143,8 @@ body {
     margin-bottom: 2rem;
 }
 
-.trendTitle{
-  display: none;
-}
-
-.trendBlock{
-  display: none;
+.profilePanel{
+  height: 100%;
 }
 
 /*Hide the API Key from displaying*/
