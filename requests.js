@@ -80,22 +80,22 @@ $(document).on('click', ".jsgrid-table tr", function () {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "http://api.themoviedb.org/3/movie/" + movieid + "?api_key=" + key,
+        "url": "https://api.themoviedb.org/3/movie/" + movieid + "?api_key=" + key,
         "method": "GET",
         "headers": {},
     }
     $.ajax(settings).done(function (response) {
         $("#detailsContainer").empty();
         var movie = response;
-        var imgUrl = 'http://image.tmdb.org/t/p/w200/';
+        var imgUrl = 'https://image.tmdb.org/t/p/w200/';
         var $modal = $('#myModal');
         var $span = $(".close")[0];
         var details = [movie.title, movie.original_title, movie.release_date, movie.spoken_languages, movie.production_countries, movie.overview];
         var currentImage = imgUrl + movie.poster_path;
         console.log(movie);
 
-        if (currentImage == "http://image.tmdb.org/t/p/w320/null") {
-            currentImage = "http://wonkville.net/wp-content/uploads/2016/04/No-image-available.jpg"
+        if (currentImage == "https://image.tmdb.org/t/p/w320/null") {
+            currentImage = "https://wonkville.net/wp-content/uploads/2016/04/No-image-available.jpg"
         };
 
         $("#image").attr("src", currentImage);
