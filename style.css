@@ -98,6 +98,26 @@ body {
 }
 
 
+#demo img{
+  display: inline-block;
+  margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#demo2 img{
+  display: inline-block;
+  margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.trendTitle{
+  display: none;
+}
+
+.trendBlock{
+  display: none;
+}
+
 /*Hide the API Key from displaying*/
 .apiKeyTMDB{
   display: none;
